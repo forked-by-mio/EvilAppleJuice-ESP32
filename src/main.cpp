@@ -10,7 +10,7 @@
 #include "devices.hpp"
 
 BLEAdvertising *pAdvertising;  // global variable
-uint32_t delaySeconds = 1;
+uint32_t delayMs = 100;
 
 void setup() {
   Serial.begin(115200);
@@ -109,6 +109,6 @@ void loop() {
   // Turn lights off while "sleeping"
   digitalWrite(12, LOW);
   digitalWrite(13, LOW);
-  delay(delaySeconds * 1000); // delay for delaySeconds seconds
+  delay(delayMs); // delay for delayMs ms
   pAdvertising->stop();
 }
