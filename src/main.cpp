@@ -10,7 +10,7 @@
 #include "devices.hpp"
 
 BLEAdvertising *pAdvertising;  // global variable
-uint32_t delayMs = 100;
+uint32_t delayMs = 500;
 
 void setup() {
   Serial.begin(115200);
